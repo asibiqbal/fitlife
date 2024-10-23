@@ -11,9 +11,7 @@
   width: 1140px;
   margin: 0 auto;
 }
-.d-none {
-  display: none;
-}
+
 .font-dancing-script {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
@@ -38,7 +36,7 @@
 /* Header */
 header {
   /* background: linear-gradient(180deg, #000 0%, rgba(119, 119, 119, 0) 100%); */
-  background-color: #000;
+  background-color: black;
 }
 
 nav {
@@ -49,6 +47,9 @@ nav {
 }
 /* Logo */
 .logo {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 800;
 }
 
 /* Menu */
@@ -68,6 +69,8 @@ ul li a {
   color: #fff;
   padding: 5px 30px;
   transition: 0.3s ease-in-out;
+  font-size: 1rem;
+  font-weight: 600;
 }
 ul li a:hover {
   background-color: #e6533c;
@@ -76,4 +79,78 @@ ul li a:hover {
 .active {
   background-color: #e6533c;
   border-radius: 39px;
+}
+/* Humburger Menu */
+.hum-menu {
+  font-size: 1rem;
+  display: none;
+  color: #e6533c;
+}
+
+/* Responsive CSS */
+
+/* Responsive CSS */
+/* mobile Devices */
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  nav {
+    padding: 20px;
+  }
+  nav ul {
+    display: none;
+  }
+  .hum-menu {
+    display: block;
+  }
+}
+/*Tablet devices*/
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  nav {
+    padding: 30px;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav ul li a {
+    padding: 5px 15px;
+  }
+  .hum-menu {
+    display: none;
+  }
+}
+/* Medium Devices (landscape tablets) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  nav {
+    padding: 30px;
+  }
+  nav ul {
+    display: flex;
+  }
+  .hum-menu {
+    display: none;
+  }
+}
+
+/* Large Devices  */
+@media (min-width: 992px) and (max-width: 1140px) {
+  .container {
+    width: 100%;
+  }
+  nav {
+    padding: 40px;
+  }
+  nav ul {
+    display: flex;
+  }
+  .hum-menu {
+    display: none;
+  }
 }

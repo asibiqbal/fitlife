@@ -6,9 +6,12 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background: black;
+}
 /* Shared CSS */
 .container {
-  width: 1140px;
+  width: 1240px;
   margin: 0 auto;
 }
 
@@ -16,6 +19,7 @@
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
   font-style: normal;
+  font-size: 6rem;
 }
 .font-inter {
   font-family: "Inter", sans-serif;
@@ -32,15 +36,56 @@
 .gray-bg {
   background: #222;
 }
-
+.img-fluid {
+  width: 100%;
+}
+.common-btn {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 16px 40px;
+  border-radius: 42px;
+  background: #e6533c;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.common-btn:hover {
+  outline: 1px solid #fff;
+  background: transparent;
+}
+.section-gap {
+  padding: 80px 0;
+}
+.common-section {
+  text-align: center;
+}
+.common-section h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.common-section p {
+  margin-top: 10px;
+  padding: 0 20%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+.text-center {
+  text-align: center;
+}
 /* Header */
 header {
   /* background: linear-gradient(180deg, #000 0%, rgba(119, 119, 119, 0) 100%); */
   background-color: black;
+  height: auto;
 }
 
 nav {
-  padding: 40px;
+  padding: 30px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,6 +132,122 @@ ul li a:hover {
   color: #e6533c;
 }
 
+/* Banner Section  */
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+}
+.banner-content {
+  margin-top: 60px;
+}
+.banner-img {
+}
+.banner-img img {
+  width: 300px;
+  height: auto;
+  position: relative;
+  z-index: 0;
+}
+.banner-content h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 4rem;
+}
+.banner-content p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
+  padding: 0 45% 0 0;
+  margin: 20px 0 30px 0;
+}
+.banner-btn {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 16px 40px;
+  border-radius: 42px;
+  background: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+.banner-btn:hover {
+  border: 1px solid #e6533c;
+  background: #e6533c;
+}
+.total-video-1 {
+  color: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px 15px;
+  /* display: none; */
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  z-index: 1;
+  display: none;
+}
+.total-video-1 h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.total-video-1 p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+.total-video-2 {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  color: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px 15px;
+  position: absolute;
+  top: 80%;
+  right: 20%;
+  display: none;
+}
+.video-circle {
+  width: 40px;
+  height: 40px;
+  background: #e6533c;
+  border-radius: 50%;
+}
+
+/* Tips Section */
+.tips-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.tips-item img {
+  width: 230px;
+  height: auto;
+  border-radius: 50%;
+}
+.tips-item h4 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+}
+.tips-item p {
+  font-size: 1rem;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+}
+
 /* Responsive CSS */
 
 /* Responsive CSS */
@@ -94,6 +255,9 @@ ul li a:hover {
 @media only screen and (max-width: 576px) {
   .container {
     width: 100%;
+  }
+  .common-section p {
+    padding: 0 0;
   }
   nav {
     padding: 20px;
@@ -104,14 +268,47 @@ ul li a:hover {
   .hum-menu {
     display: block;
   }
+  /* Banner Section */
+  .banner-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .banner-content {
+    margin-top: 10px;
+  }
+  .banner-content h1 {
+    font-size: 3rem;
+  }
+  .banner-content h1 span {
+    font-size: 3rem;
+  }
+  .banner-content p {
+    padding: 0 0;
+  }
+  .banner-img {
+    margin: 15px auto;
+  }
+  .banner-btn {
+    margin: 15px 0 0 0;
+  }
+  /* Tips Section */
+  .tips-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .tips-item {
+    margin-bottom: 50px;
+  }
 }
 /*Tablet devices*/
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .container {
     width: 100%;
   }
+  .common-section p {
+    padding: 0 0;
+  }
   nav {
-    padding: 30px;
+    padding: 20px;
   }
   nav ul {
     display: flex;
@@ -122,14 +319,49 @@ ul li a:hover {
   .hum-menu {
     display: none;
   }
+  /* Banner Section */
+  /* Banner Section */
+  .banner-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .banner-content {
+    margin-top: 20px;
+  }
+  .banner-content h1 {
+    font-size: 4rem;
+    padding-right: 40%;
+  }
+  .banner-content h1 span {
+    font-size: 4rem;
+  }
+  .banner-content p {
+    padding: 0 40% 0 0;
+  }
+  .banner-img {
+    margin: 30px auto;
+  }
+  .banner-btn {
+    margin: 15px 0 0 10px;
+  }
+  /* Tips Section */
+  .tips-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tips-item {
+    margin-bottom: 50px;
+  }
 }
 /* Medium Devices (landscape tablets) */
 @media (min-width: 768px) and (max-width: 992px) {
   .container {
     width: 100%;
   }
+  .common-section p {
+    padding: 0 0;
+  }
   nav {
-    padding: 30px;
+    padding: 20px;
   }
   nav ul {
     display: flex;
@@ -137,15 +369,25 @@ ul li a:hover {
   .hum-menu {
     display: none;
   }
+  /* Tips Section */
+  .tips-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tips-item {
+    margin-bottom: 50px;
+  }
 }
 
 /* Large Devices  */
-@media (min-width: 992px) and (max-width: 1140px) {
+@media (min-width: 992px) and (max-width: 1239px) {
   .container {
     width: 100%;
   }
+  .common-section p {
+    padding: 0 0;
+  }
   nav {
-    padding: 40px;
+    padding: 30px;
   }
   nav ul {
     display: flex;

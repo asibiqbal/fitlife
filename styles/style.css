@@ -28,6 +28,7 @@ body {
 }
 .red-orange {
   color: #e6533c;
+  font-size: 2rem;
 }
 .gray {
   color: rgba(255, 255, 255, 0.5);
@@ -129,6 +130,77 @@ nav {
 .humburger-menu {
   color: #fff;
   display: none;
+}
+/* Banner Section */
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner-content {
+  width: 50%;
+}
+.banner-btn {
+  margin-left: 10px;
+}
+.banner-title {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 900;
+  width: 80%;
+}
+.banner-description {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin: 30px 0;
+  width: 85%;
+}
+.banner-img {
+  position: relative;
+}
+.total-video-1 {
+  position: absolute;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px 15px;
+  top: 30%;
+  right: 0;
+}
+
+.total-video-1 h3,
+.total-video-2 h3 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.total-video-1 p,
+.total-video-2 p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.75rem;
+}
+.total-video-2 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px 15px;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #e6533c;
+  border-radius: 50%;
 }
 /* Tips Section */
 .tips-container {
@@ -372,23 +444,22 @@ footer {
   /* Banner Section */
   .banner-container {
     flex-direction: column;
-    padding: 0 20px;
   }
   .banner-content {
-    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 20px;
   }
-  .banner-content h1 {
+  .banner-title {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .banner-title span {
     font-size: 3rem;
   }
-  .banner-content h1 span {
-    font-size: 3rem;
+  .banner-description {
+    width: 100%;
   }
-  .banner-content p {
-    padding: 0 0;
-  }
-  .banner-img {
-    margin: 15px auto;
-  }
+
   .blog-img img {
     width: 100%;
     height: auto;
@@ -477,18 +548,6 @@ footer {
   }
   .common-section p {
     padding: 0 0;
-  }
-  nav {
-    padding: 20px;
-  }
-  nav ul {
-    display: flex;
-  }
-  nav ul li a {
-    padding: 5px 15px;
-  }
-  .hum-menu {
-    display: none;
   }
   /* Banner Section */
   /* Banner Section */
@@ -590,15 +649,6 @@ footer {
   }
   .common-section p {
     padding: 0 0;
-  }
-  nav {
-    padding: 20px;
-  }
-  nav ul {
-    display: flex;
-  }
-  .hum-menu {
-    display: none;
   }
   /* Tips Section */
   .tips-container {

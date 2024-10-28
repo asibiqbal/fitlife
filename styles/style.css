@@ -56,6 +56,22 @@ body {
   outline: 1px solid #fff;
   background: transparent;
 }
+.banner-btn {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 16px 40px;
+  border-radius: 42px;
+  background: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.common-btn:hover {
+  background: #e6533c;
+  outline: 1px solid #e6533c;
+}
 .section-gap {
   padding: 80px 0;
 }
@@ -207,6 +223,7 @@ nav {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 0 30px;
 }
 .tips-item img {
   width: 230px;
@@ -235,7 +252,7 @@ nav {
   color: #fff;
   font-size: 3rem;
   font-weight: 900;
-  width: 40%;
+  /* width: 50%; */
 }
 .blog-paragraph {
   font-size: 1rem;
@@ -367,6 +384,7 @@ th {
 .team-content p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1;
+  margin-top: 10px;
 }
 .team-member {
   position: relative;
@@ -383,7 +401,7 @@ th {
     rgba(0, 0, 0, 0.2) 0%,
     rgba(0, 0, 0, 0.2) 100%
   ); */
-  opacity: 0.7;
+  opacity: 0.6;
   height: 300px;
 }
 /* Footer-container */
@@ -400,10 +418,10 @@ footer {
   margin-bottom: 40px;
 }
 .footer-logo p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 171.429% */
+  line-height: 25px; /* 171.429% */
   letter-spacing: 0.3px;
   margin-top: 10px;
 }
@@ -421,6 +439,10 @@ footer {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1rem;
   text-decoration: none;
+  transition: 0.3s ease-out;
+}
+.footer-menu a:hover {
+  color: #e6533c;
 }
 
 /* Responsive CSS */

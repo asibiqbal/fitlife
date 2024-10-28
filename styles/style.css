@@ -107,17 +107,17 @@ nav {
 }
 
 /* Menu */
-ul {
+nav ul {
   display: flex;
   align-items: center;
   padding: 10px 2px;
   border-radius: 39px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-ul li {
+nav ul li {
   list-style: none;
 }
-ul li a {
+nav ul li a {
   text-decoration: none;
   margin: 0 5px;
   color: #fff;
@@ -126,7 +126,7 @@ ul li a {
   font-size: 1rem;
   font-weight: 600;
 }
-ul li a:hover {
+nav ul li a:hover {
   background-color: #e6533c;
   border-radius: 39px;
 }
@@ -149,8 +149,6 @@ ul li a:hover {
 .banner-content {
   margin-top: 60px;
 }
-.banner-img {
-}
 .banner-img img {
   width: 300px;
   height: auto;
@@ -167,7 +165,7 @@ ul li a:hover {
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0.5px;
-  padding: 0 45% 0 0;
+  padding: 0 40% 0 0;
   margin: 20px 0 30px 0;
 }
 .banner-btn {
@@ -281,6 +279,23 @@ ul li a:hover {
 .blog-img img {
   width: 330px;
   height: 300px;
+}
+/* Client Section */
+.client-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+.client-item h4 {
+  color: #e6533c;
+  font-size: 4rem;
+}
+.client-item p {
+  color: #adadad;
+  font-size: 1rem;
 }
 /* BMI Section */
 .bmi-container {
@@ -401,6 +416,43 @@ th {
   opacity: 0.7;
   height: 300px;
 }
+/* Footer-container */
+footer {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 0;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 60px;
+  margin-bottom: 40px;
+}
+.footer-logo p {
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 171.429% */
+  letter-spacing: 0.3px;
+  margin-top: 10px;
+}
+.footer-menu h6 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.footer-menu ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+.footer-menu ul li a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
 /* Responsive CSS */
 
 /* Responsive CSS */
@@ -481,6 +533,12 @@ th {
   .container {
     width: 90%;
   }
+  /* Client Section */
+  .client-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px 0;
+  }
   /* BMI Section */
   .bmi-container {
     flex-direction: column;
@@ -501,11 +559,16 @@ th {
   .team-container {
     grid-template-columns: repeat(1, 1fr);
   }
+  /* Footer */
+  .footer-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px 0;
+  }
 }
 /*Tablet devices*/
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .container {
-    width: 100%;
+    width: 95%;
   }
   .common-section p {
     padding: 0 0;
@@ -582,6 +645,12 @@ th {
   .section-gap-top {
     padding-top: 0;
   }
+  /* Client Section */
+  .client-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 0;
+  }
   /* BMI Section */
   .bmi-container {
     flex-direction: column;
@@ -603,11 +672,16 @@ th {
   .team-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* Footer Section */
+  /* Footer .footer-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px 0;
+  } */
 }
 /* Medium Devices (landscape tablets) */
 @media (min-width: 768px) and (max-width: 992px) {
   .container {
-    width: 100%;
+    width: 95%;
   }
   .common-section p {
     padding: 0 0;
@@ -650,6 +724,12 @@ th {
   .section-gap-top {
     padding-top: 0;
   }
+  /* Client Section */
+  .client-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 0;
+  }
   /* BMI Section */
   .bmi-container {
     flex-direction: column;
@@ -675,7 +755,7 @@ th {
 /* Large Devices  */
 @media (min-width: 992px) and (max-width: 1239px) {
   .container {
-    width: 100%;
+    width: 95%;
   }
   .common-section p {
     padding: 0 0;
@@ -709,6 +789,11 @@ th {
   }
   .section-gap-top {
     padding-top: 0;
+  }
+  /* Client Section */
+  .client-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
   .bmi-form input {
     width: 80%;
